@@ -99,7 +99,7 @@ int main(int argc, char const *argv[])
     printf("escolha a coluna: \n");
     scanf("%d", &coluna);
 
-    tabuleiro[linha][coluna] = I[0];
+    tabuleiro[linha][coluna] = II[0];
     printf("\n");
     
     
@@ -119,7 +119,7 @@ int main(int argc, char const *argv[])
     printf("escolha a coluna: \n");
     scanf("%d", &coluna);
 
-    tabuleiro[linha][coluna] = II[0];
+    tabuleiro[linha][coluna] = I[0];
     printf("\n");
     
     
@@ -133,8 +133,23 @@ int main(int argc, char const *argv[])
         
     }
 
+    int verificarvencedor(char tauleiro[3][3]); {
 
+        //verificar linhas
+        for (linha = 0; linha < QTD_LINHAS; linha++)
+        {
+            if (tabuleiro[linha][0] == tabuleiro[linha][1] &&
+                tabuleiro[linha][1] == tabuleiro[linha][2] &&
+                tabuleiro[linha][0] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }
+            
+ 
+        }   
 
+    }
 
 
 

@@ -114,7 +114,157 @@ int main(int argc, char const *argv[])
     }
     
     // quinta rodada
-     printf("escolha a linha: \n");
+    printf("escolha a linha: \n");
+    scanf("%d", &linha);
+    printf("escolha a coluna: \n");
+    scanf("%d", &coluna);
+
+    tabuleiro[linha][coluna] = I[0];
+    printf("\n");
+    
+    
+    for (linha = 0; linha < QTD_LINHAS; linha++)
+    {   
+        for (coluna = 0; coluna < QTD_COLUNAS; coluna++)
+        {
+            printf("%c ", tabuleiro[linha][coluna]);
+        }   
+        printf("\n");
+        
+    }
+    
+    
+    //essa parte do codigo vai verificar se a um vencedor a cada final de rodada a partir da quinta rodada é necessario checar ate o jogo finalizar 
+    int verificarvencedor(char tauleiro[3][3]); 
+    {
+
+        //verificar linhas
+        for (linha = 0; linha < QTD_LINHAS; linha++)
+        {
+            if (tabuleiro[linha][0] == tabuleiro[linha][1] &&
+                tabuleiro[linha][1] == tabuleiro[linha][2] &&
+                tabuleiro[linha][0] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }
+            
+ 
+        }   
+
+        //verificar colunas
+        for (coluna = 0; coluna < QTD_LINHAS; coluna++)
+        {
+            if (tabuleiro[0][coluna] == tabuleiro[1][coluna] &&
+                tabuleiro[1][coluna] == tabuleiro[2][coluna] &&
+                tabuleiro[0][coluna] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }
+            
+ 
+        } 
+
+        //verificar diagonais principal
+        {
+            if (tabuleiro[0][0] == tabuleiro[1][1] &&
+            tabuleiro[1][1] == tabuleiro[2][2] &&
+            tabuleiro[0][0] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }  
+        }   
+        //verificar diagonais secundária
+        {
+            if (tabuleiro[0][2] == tabuleiro[1][1] &&
+                tabuleiro[1][1] == tabuleiro[2][0] &&
+                tabuleiro[0][2] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }       
+        }
+    
+    }
+
+    // sexta rodada
+    printf("escolha a linha: \n");
+    scanf("%d", &linha);
+    printf("escolha a coluna: \n");
+    scanf("%d", &coluna);
+
+    tabuleiro[linha][coluna] = II[0];
+    printf("\n");
+    
+    
+    for (linha = 0; linha < QTD_LINHAS; linha++)
+    {   
+        for (coluna = 0; coluna < QTD_COLUNAS; coluna++)
+        {
+            printf("%c ", tabuleiro[linha][coluna]);
+        }   
+        printf("\n");
+        
+    }
+
+    int verificarvencedor(char tauleiro[3][3]); 
+    {
+
+        //verificar linhas
+        for (linha = 0; linha < QTD_LINHAS; linha++)
+        {
+            if (tabuleiro[linha][0] == tabuleiro[linha][1] &&
+                tabuleiro[linha][1] == tabuleiro[linha][2] &&
+                tabuleiro[linha][0] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }
+            
+ 
+        }   
+
+        //verificar colunas
+        for (coluna = 0; coluna < QTD_LINHAS; coluna++)
+        {
+            if (tabuleiro[0][coluna] == tabuleiro[1][coluna] &&
+                tabuleiro[1][coluna] == tabuleiro[2][coluna] &&
+                tabuleiro[0][coluna] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }
+            
+ 
+        } 
+
+        //verificar diagonais principal
+        {
+            if (tabuleiro[0][0] == tabuleiro[1][1] &&
+            tabuleiro[1][1] == tabuleiro[2][2] &&
+            tabuleiro[0][0] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }  
+        }   
+        //verificar diagonais secundária
+        {
+            if (tabuleiro[0][2] == tabuleiro[1][1] &&
+                tabuleiro[1][1] == tabuleiro[2][0] &&
+                tabuleiro[0][2] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }       
+        }
+    
+    }
+
+    // setima rodada
+    printf("escolha a linha: \n");
     scanf("%d", &linha);
     printf("escolha a coluna: \n");
     scanf("%d", &coluna);
@@ -133,7 +283,8 @@ int main(int argc, char const *argv[])
         
     }
 
-    int verificarvencedor(char tauleiro[3][3]); {
+    int verificarvencedor(char tauleiro[3][3]); 
+    {
 
         //verificar linhas
         for (linha = 0; linha < QTD_LINHAS; linha++)
@@ -149,10 +300,116 @@ int main(int argc, char const *argv[])
  
         }   
 
+        //verificar colunas
+        for (coluna = 0; coluna < QTD_LINHAS; coluna++)
+        {
+            if (tabuleiro[0][coluna] == tabuleiro[1][coluna] &&
+                tabuleiro[1][coluna] == tabuleiro[2][coluna] &&
+                tabuleiro[0][coluna] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }
+            
+ 
+        } 
+
+        //verificar diagonais principal
+        {
+            if (tabuleiro[0][0] == tabuleiro[1][1] &&
+            tabuleiro[1][1] == tabuleiro[2][2] &&
+            tabuleiro[0][0] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }  
+        }   
+        //verificar diagonais secundária
+        {
+            if (tabuleiro[0][2] == tabuleiro[1][1] &&
+                tabuleiro[1][1] == tabuleiro[2][0] &&
+                tabuleiro[0][2] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }       
+        }
+    
     }
 
+    // oitava rodada
+    printf("escolha a linha: \n");
+    scanf("%d", &linha);
+    printf("escolha a coluna: \n");
+    scanf("%d", &coluna);
 
+    tabuleiro[linha][coluna] = II[0];
+    printf("\n");
+    
+    
+    for (linha = 0; linha < QTD_LINHAS; linha++)
+    {   
+        for (coluna = 0; coluna < QTD_COLUNAS; coluna++)
+        {
+            printf("%c ", tabuleiro[linha][coluna]);
+        }   
+        printf("\n");
+        
+    }
 
+    int verificarvencedor(char tauleiro[3][3]); 
+    {
+
+        //verificar linhas
+        for (linha = 0; linha < QTD_LINHAS; linha++)
+        {
+            if (tabuleiro[linha][0] == tabuleiro[linha][1] &&
+                tabuleiro[linha][1] == tabuleiro[linha][2] &&
+                tabuleiro[linha][0] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }
+            
+ 
+        }   
+
+        //verificar colunas
+        for (coluna = 0; coluna < QTD_LINHAS; coluna++)
+        {
+            if (tabuleiro[0][coluna] == tabuleiro[1][coluna] &&
+                tabuleiro[1][coluna] == tabuleiro[2][coluna] &&
+                tabuleiro[0][coluna] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }
+            
+ 
+        } 
+
+        //verificar diagonais principal
+        {
+            if (tabuleiro[0][0] == tabuleiro[1][1] &&
+            tabuleiro[1][1] == tabuleiro[2][2] &&
+            tabuleiro[0][0] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }  
+        }   
+        //verificar diagonais secundária
+        {
+            if (tabuleiro[0][2] == tabuleiro[1][1] &&
+                tabuleiro[1][1] == tabuleiro[2][0] &&
+                tabuleiro[0][2] != '-')
+            {
+                printf("o jogo acabou\n");
+                return 1;
+            }       
+        }
+    
+    }
     
 
 }
